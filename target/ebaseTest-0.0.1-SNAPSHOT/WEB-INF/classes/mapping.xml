@@ -1,0 +1,18 @@
+<?xml version='1.0'?>
+<URLMapping>
+   <URL>
+      <PATH>/Logon</PATH>
+      <TYPE>jp.co.ebase.action.LogonAction</TYPE>
+      <FORM>jp.co.ebase.form.LogonForm</FORM>
+      <SUCCESS>login_success</SUCCESS>
+      <INPUT>logon</INPUT>
+   </URL>
+   <URL>
+      <PATH>/DispCate</PATH>
+      <TYPE>jp.co.ebase.action.DispCateAction</TYPE>
+      <FORM>jp.co.ebase.form.DispCateForm</FORM>
+      <SUCCESS>ShowCategory</SUCCESS>
+      <ICONS_MATRIX>ShowCategory</ICONS_MATRIX>
+      <INPUT>error</INPUT>
+   </URL>
+</URLMapping>
