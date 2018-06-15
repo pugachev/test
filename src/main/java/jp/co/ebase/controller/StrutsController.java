@@ -25,6 +25,8 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.multipart.MultipartFile;
 import org.xml.sax.SAXException;
 
 import jp.co.ebase.action.ActionForward;
@@ -83,9 +85,12 @@ public class StrutsController
     }
 
 	@RequestMapping(value = "/{*}",method = {RequestMethod.GET,RequestMethod.POST})
-	public String strutsController(ActionForm actionform,HttpServletRequest httpServletRequest,HttpServletResponse httpServletResponse) throws  SAXException, IOException, ParserConfigurationException
+	public String strutsController(@RequestParam(name="file",required=false) MultipartFile file,ActionForm actionform,HttpServletRequest httpServletRequest,HttpServletResponse httpServletResponse) throws  SAXException, IOException, ParserConfigurationException
 	{
 		ActionForm formclass=null;
+
+		String rcvId = httpServletRequest.getParameter("id");
+		String rcvPw =  httpServletRequest.getParameter("password");
 
 		//mapping.xmlからURLと遷移先の取得
 		if(mList==null || mList.size()>0)

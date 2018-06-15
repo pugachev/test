@@ -15,4 +15,29 @@
       <ICONS_MATRIX>ShowCategory</ICONS_MATRIX>
       <INPUT>error</INPUT>
    </URL>
+   <URL>
+      <PATH>/Update</PATH>
+      <TYPE>jp.co.ebase.action.UpdateAction</TYPE>
+      <FORM>jp.co.ebase.form.UpdateForm</FORM>
+      <SUCCESS>update_success</SUCCESS>
+      <INPUT>update</INPUT>
+   </URL>
 </URLMapping>
+
+<!-- <url>
+  <path>/DispOutLineUpdate</path>
+  <type>EbaseWeb.DispCateAction</type>
+  <name>dispCateForm</name>
+  <input>/error.jsp</input>
+  <scope>request</scope>
+  <forward>
+	  <success>/ShowCategory.jsp</success>
+	  <icons_matrix>/ShowCategory.jsp</icons_matrix>
+	  <searched>
+	  	<path>/DispCateOutLineUpdate</path>
+	  	<contextRelative>true</contextRelative>
+	  	<redirect>false</redirect>
+	  </searched>
+	  <input>/error.jsp</input>
+  </forward>
+</url> -->
